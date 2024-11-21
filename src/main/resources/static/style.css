@@ -1,0 +1,14 @@
+.main-content {
+    width: 80%;
+    padding: 20px;
+
+    /* 배경 이미지 추가 */
+    background-image: url('/images/coffee-background.jpg'); /* 이미지 경로 */
+    background-size: cover; /* 이미지 크기를 영역에 맞춤 */
+    background-position: center; /* 이미지 중심 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 제거 */
+
+    /* 텍스트 가독성을 위해 추가 */
+    background-color: rgba(255, 255, 255, 0.9); /* 흰색 반투명 배경 */
+    backdrop-filter: blur(5px); /* 블러 효과 */
+}

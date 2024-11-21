@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Coffee 9</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+        <h1>Project Coffee 9</h1>
+        <ul>
+            <li><a href="/menu">Coffee Beans</a></li>
+            <li><a href="/menu">Powder Coffee</a></li>
+            <li><a href="/menu">Drip Coffee</a></li>
+            <li><a href="/menu">Capsule Coffee</a></li>
+            <li><a href="/menu">Blend Coffee</a></li>
+            <li><a href="/login">Login</a></li> <!-- 로그인 추가 -->
+            <li><a href="/signup">Join the Membership</a></li> <!-- 회원가입 추가 -->
+        </ul>
+    </aside>
+
+    <!-- 오른쪽 컨텐츠 -->
+    <main class="content">
+        <!-- 이 부분은 다른 템플릿에서 채워집니다 -->
+        <div th:insert="~{::content}"></div>
+    </main>
+</div>
+</body>
+</html>

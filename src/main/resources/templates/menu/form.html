@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>메뉴 폼</title>
+</head>
+<body>
+<h1>메뉴 추가/수정</h1>
+<form th:action="@{/menu}" th:object="${menu}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    <div>
+        <label>메뉴 이름:</label>
+        <input type="text" th:field="*{name}" required/>
+    </div>
+    <div>
+        <label>설명:</label>
+        <textarea th:field="*{description}" required></textarea>
+    </div>
+    <div>
+        <label>가격:</label>
+        <input type="number" th:field="*{price}" step="0.01" required/>
+    </div>
+    <div>
+        <label>이미지 URL:</label>
+        <input type="text" th:field="*{imageUrl}"/>
+    </div>
+    <button type="submit">저장</button>
+</form>
+<a href="/menu">목록으로 돌아가기</a>
+</body>
+</html>
