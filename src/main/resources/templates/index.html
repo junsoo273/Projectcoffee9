@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <link rel="stylesheet" th:href="@{/style.css}" />
+
   <title>Project Coffee 9</title>
   <style>
     /* 기본 레이아웃 설정 */
@@ -40,19 +41,18 @@
       border-radius: 5px; /* 호버 시 모서리 둥글게 */
     }
 
-    /* 간격 추가를 위한 Spacer */
-    .sidebar .spacer {
-      height: 60px; /* Blend Coffee와 Login 사이 간격 */
-    }
-
     /* 메인 콘텐츠 스타일 */
     .main-content {
       width: 80%;
       padding: 20px;
+
+      /* 배경 이미지 추가 */
       background-image: url('/images/coffee-background.jpg'); /* 이미지 경로 수정 */
       background-size: cover; /* 이미지 크기를 영역에 맞춤 */
       background-position: center; /* 이미지 중심 정렬 */
       background-repeat: no-repeat; /* 이미지 반복 제거 */
+
+      /* 텍스트 가독성을 위해 추가 */
       background-color: rgba(255, 255, 255, 0.9); /* 흰색 반투명 배경 */
       backdrop-filter: blur(5px); /* 블러 효과 */
     }
@@ -70,19 +70,13 @@
 </head>
 <body>
 <!-- 사이드바 -->
-<div class="sidebar">
+<<div class="sidebar">
   <h3>Project Coffee 9</h3>
-  <a th:href="@{/menu/details/1}">Coffee Beans</a>
-  <a th:href="@{/menu/details/2}">Powder Coffee</a>
-  <a th:href="@{/menu/details/3}">Drip Coffee</a>
-  <a th:href="@{/menu/details/4}">Capsule Coffee</a>
-  <a th:href="@{/menu/details/5}" class="last-coffee">Blend Coffee</a>
-
-  <!-- 간격 추가 -->
-  <div class="spacer"></div>
-
-  <a th:href="@{/login}">Login</a>
-  <a th:href="@{/signup}">Join the Membership</a>
+  <a th:href="@{/menu/details/1}">Coffee Beans</a> <!-- ID 1 -->
+  <a th:href="@{/menu/details/2}">Powder Coffee</a> <!-- ID 2 -->
+  <a th:href="@{/menu/details/3}">Drip Coffee</a> <!-- ID 3 -->
+  <a th:href="@{/menu/details/4}">Capsule Coffee</a> <!-- ID 4 -->
+  <a th:href="@{/menu/details/5}">Blend Coffee</a> <!-- ID 5 -->
 </div>
 
 <!-- 메인 콘텐츠 -->

@@ -9,7 +9,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('/images/new-background.jpg'); /* 새 이미지 파일 경로 */
+            background-image: url('/images/new-background.jpg'); /* 배경 이미지 */
             background-size: cover;
             background-position: center;
             margin: 0;
@@ -20,13 +20,14 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 400px;
         }
 
         .login-container h1 {
-            font-size: 20px;
+            font-size: 24px;
             margin-bottom: 20px;
             text-align: center;
+            font-weight: bold;
         }
 
         .login-container form {
@@ -39,6 +40,7 @@
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 14px;
         }
 
         .login-container button {
@@ -49,6 +51,7 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: bold;
         }
 
         .login-container button:hover {
@@ -56,11 +59,16 @@
         }
 
         .login-container a {
-            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 15px;
             font-size: 14px;
             color: black;
-            text-align: center;
-            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -68,8 +76,8 @@
 <div class="login-container">
     <h1>Login</h1>
     <form th:action="@{/login}" method="post">
-        <input type="text" name="username" placeholder="Enter username" required>
-        <input type="password" name="password" placeholder="Enter password" required>
+        <input type="text" name="username" placeholder="Enter your username" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
         <button type="submit">Sign In</button>
     </form>
     <a th:href="@{/signup}">Don't have an account? Join the Membership</a>

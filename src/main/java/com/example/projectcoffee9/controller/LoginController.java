@@ -8,11 +8,11 @@ public class LoginController {
 
     @GetMapping("/login")
     public String loginPage() {
-        return "login"; // login.html 반환
+        return "auth/login"; // templates/auth/login.html
     }
 
     @GetMapping("/signup")
     public String signupPage() {
-        return "signup"; // signup.html 반환
+        return "auth/signup"; // templates/auth/signup.html
     }
 }

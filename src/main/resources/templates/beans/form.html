@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Bean Form</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1 th:text="${bean.id != null ? 'Edit Bean' : 'Add New Bean'}"></h1>
+<form th:action="@{/templates/beans}" th:object="${bean}" method="post" style="max-width: 400px;">
+  <input type="hidden" th:field="*{id}"/>
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" type="text" th:field="*{name}" placeholder="Enter bean name" required>
+  </div>
+  <div>
+    <label for="origin">Origin:</label>
+    <input id="origin" type="text" th:field="*{origin}" placeholder="Enter origin" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" th:field="*{description}" placeholder="Enter description" required></textarea>
+  </div>
+  <div>
+    <label for="price">Price:</label>
+    <input id="price" type="number" step="0.01" th:field="*{price}" placeholder="Enter price" required>
+  </div>
+  <div>
+    <label for="imageUrl">Image URL:</label>
+    <input id="imageUrl" type="text" th:field="*{imageUrl}" placeholder="Enter image URL">
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+  <a href="/templates/beansates/beans" class="btn btn-secondary">Cancel</a>
+</form>
+</body>
+</html>

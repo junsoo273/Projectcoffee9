@@ -9,11 +9,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-image: url('/images/new1-background.jpg'); /* 배경 이미지 경로 */
+            background-image: url('/images/new1-background.jpg'); /* 배경 이미지 */
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            margin: 0;
         }
 
         .signup-container {
@@ -77,7 +76,6 @@
 <div class="signup-container">
     <h1>Join the Membership</h1>
     <form th:action="@{/signup}" method="post">
-        <!-- 추가된 필드 -->
         <input type="text" name="username" placeholder="Enter your username" required>
         <input type="password" name="password" placeholder="Enter your password" required>
         <input type="password" name="confirmPassword" placeholder="Confirm your password" required>
@@ -85,7 +83,7 @@
         <input type="text" name="contact" placeholder="Enter your contact number" required>
         <input type="date" name="birthdate" placeholder="Enter your birthdate" required>
         <select name="gender" required>
-            <option value="">Select your gender</option>
+            <option value="" disabled selected>Select your gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
         </select>
